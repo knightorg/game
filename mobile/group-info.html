@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>chat</title>
+    <link rel="stylesheet" href="./statics/main.css">
+    <link rel="stylesheet" href="./statics/group-info.css">
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <i class="icon return_icon"></i>
+      <span>GROUP MEMBER</span>
+      <i class="icon"></i>
+    </div>
+    <div class="info-wrap">
+      <div class="card-space-ctrl">
+        <div class="member-head clearfix">
+          <div class="member-list">
+            <img class="show-modal add-icon" data-modal="#add-group-pop" src="./statics/icon/add_friend_m.png">
+            <span class="nick-name">
+              Add
+            </span>
+            </div>
+          <div class="member-list">
+            <img class="show-modal" data-modal="#info-pop" src="https://ns-strategy.cdn.bcebos.com/ns-strategy/upload/fc_big_pic/part-00417-4244.jpg">
+            <span class="nick-name">
+              RobQtt
+            </span>
+          </div>
+          <div class="member-list">
+            <img class="show-modal" data-modal="#info-pop" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            <span class="nick-name">
+              Emma
+            </span>
+          </div>
+          <div class="member-list">
+              <img class="show-modal" data-modal="#info-pop" class="show-info" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            <span class="nick-name">
+              Alen
+            </span>
+          </div>
+          <div class="member-list">
+              <img class="show-modal" data-modal="#info-pop" class="show-info" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            <span class="nick-name">
+              RobQtt
+            </span>
+          </div>
+          <div class="member-list">
+              <img class="show-modal" data-modal="#info-pop" class="show-info" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            <span class="nick-name">
+              RobQtt
+            </span>
+          </div>
+          <div class="member-list">
+              <img class="show-modal" data-modal="#info-pop" class="show-info" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            <span class="nick-name">
+              RobQtt
+            </span>
+          </div>
+        </div>
+        <div class="group-name">
+          <div class="title">Group Name</div>
+          <input type="text" value="League of legends">
+          <i class="icon edit-gname"></i>
+          <!-- <i class="icon edit-gname active"></i> -->
+        </div>
+      </div>
+    </div>
+    <!-- popup -->
+    <!-- 好友信息 -->
+    <div class="modal-warp hide" id="info-pop">
+      <div class="modal-panel info-panel">
+        <div class="close-modal">
+          <span class="icon close-btn close-btn-m"></span>
+        </div>
+        <div class="sign-panel">
+            <div class="panel-cont">
+              <div class="card-space-ctrl">
+                <div class="card-header">
+                  <div class="head-img">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                  </div>
+                  <span class="pet-name">
+                    RobQtt
+                  </span>
+                </div>
+                <div class="card-body">
+                    <a href="">Platform ID</a>
+                      <dl>
+                        <dt>
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                        </dt>
+                        <dd>mxguy</dd>
+                      </dl>
+                      <dl>
+                        <dt>
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                        </dt>
+                        <dd>coming soon</dd>
+                      </dl>
+                      <dl>
+                        <dt>
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                        </dt>
+                        <dd>coming soon</dd>
+                      </dl>
+
+                    <a class="operators" href="">Top Operators</a>
+                    <ul class="clearfix">
+                      <li>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </li>
+                      <li>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </li>
+                      <li>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="submitname-btn">
+                    Add Friend
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-warp hide" id="add-group-pop">
+      <div class="modal-panel">
+        <div class="close-modal">
+          <span class="icon close-btn close-btn-m"></span>
+        </div>
+        <div class="sign-panel">
+            <div class="panel-title clearfix">
+              <div class="fl">
+                SELECT FRIENDS
+              </div>
+            </div>
+            <div class="panel-cont">
+              <form action="">
+                  <div class="items">
+                    <input id="mid" type="checkbox" name="checkbox" value="" class="hide">
+                    <label for="mid"></label>  <!-- 隐藏input用label写样式，for必须和input的ID对应 -->
+                    <img class="friend-head" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    <span class="nickname">RobQtt</span>
+                  </div>
+                  <div class="items">
+                    <input id="_id" type="checkbox" name="checkbox" value="" class="hide">
+                    <label for="_id"></label>  <!-- 隐藏input用label写样式，for必须和input的ID对应 -->
+                    <img class="friend-head" src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    <span class="nickname">Royalty</span>
+                  </div>
+              </form>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="submitname-btn">
+                Submit
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script type="text/javascript">
+    $(function(){
+      //返回上一页
+      $(".return_icon").click(function(){
+        history.go(-1)
+        })
+      //弹出模态框
+      $(".show-modal").on('click',function(){
+        $($(this).data('modal')).show();
+      })
+      //关闭pop
+      $(".close-btn").on('click',function(){
+        $(this).closest('.modal-warp').hide();
+      })
+    })
+  </script>
+  </body>
+
+</html>

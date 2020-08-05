@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>Q&A</title>
+    <link rel="stylesheet" href="./statics/main.css">
+    <link rel="stylesheet" href="./statics/community.css">
+    <link rel="stylesheet" href="./statics/notice.css">
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+
+</head>
+<body>
+  <div class="header">
+    <i class="icon return_icon"></i>
+    <span>MESSAGE</span>
+    <i class="icon add-friends"></i>
+  </div>
+  <div class="community-wrap">
+    <div class="qa-wrap">  <!--  Hot Q&A 内容-->
+      <div class="qa-items"> <!-- item-->
+          <div class="items-cont">
+        <div class="notice-img">
+          <img src="./statics/icon/notice_add.png" alt="">
+        </div>
+        <div>
+          <span class="time">2020.02.21 12:30</span>
+          <div class="addcont cont"> <!-- 内容展示-->
+             <text class="add">Linda</text> asked for a friend
+          </div>
+        </div>
+        </div>
+        <div class="qa-footer">  <!--Comment Collect按钮-->
+          <button class="active fr" type="button">Agree</button>
+          <button class="fr" type="button"> gnore</button>
+        </div>
+      </div>
+      <div class="qa-items"> <!-- item-->
+          <div class="items-cont">
+        <div class="notice-img">
+          <img src="./statics/icon/notice.png" alt="">
+        </div>
+        <div>
+          <span class="time">2020.02.21 12:30</span>
+          <div class="cont"> <!-- 内容展示-->
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- popup -->
+  <!-- 好友信息 -->
+  <div class="modal-warp hide" id="info-pop">
+    <div class="modal-panel info-panel">
+      <div class="close-modal">
+        <span class="icon close-btn close-btn-m"></span>
+      </div>
+      <div class="sign-panel">
+          <div class="panel-cont">
+            <div class="card-space-ctrl">
+              <div class="card-header">
+                <div class="head-img">
+                  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                </div>
+                <span class="pet-name">
+                  RobQtt
+                </span>
+              </div>
+              <div class="card-body">
+                  <a href="">Platform ID</a>
+                    <dl>
+                      <dt>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </dt>
+                      <dd>mxguy</dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </dt>
+                      <dd>coming soon</dd>
+                    </dl>
+                    <dl>
+                      <dt>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </dt>
+                      <dd>coming soon</dd>
+                    </dl>
+
+                  <a class="operators" href="">Top Operators</a>
+                  <ul class="clearfix">
+                    <li>
+                      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    </li>
+                    <li>
+                      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    </li>
+                    <li>
+                      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    </li>
+                  </ul>
+              </div>
+
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  $(function(){
+    //hot QA Wait For Your Answer切换
+    $('.nav').on('click',function(){
+      $('.nav').removeClass('nav-active');
+      $(this).addClass('nav-active');
+      $('.qa-wrap').hide();
+      $($(this).data('id')).show();
+    })
+    //返回上一页
+    $(".return_icon").click(function(){
+      history.go(-1)
+    })
+    $(".add").on('click',function(){
+      $('#info-pop').show();
+    })
+    //关闭pop
+    $(".close-btn").on('click',function(){
+      $(this).closest('.modal-warp').hide();
+    })
+
+
+  })
+</script>
+</html>

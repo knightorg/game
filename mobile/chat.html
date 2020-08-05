@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>chat</title>
+    <link rel="stylesheet" href="./statics/main.css">
+    <link rel="stylesheet" href="./statics/chat.css">
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+  </head>
+  <body>
+    <div class="chat-container container">
+      <div class="header">
+        <i class="icon return_icon"></i>
+        <span>Alen</span>
+        <i class="icon add-friends"></i>
+      </div>
+      <!-- <div class="chat-interface">
+          <div class="message-item-recevie">
+            <div class="head-img">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            </div>
+            <div class="message-tip">
+              <span class="time">2.20 13:10</span>
+              <div class="message-detail">
+                Chat virtual copywriting...
+              </div>
+            </div>
+          </div>
+          <div class="message-item-recevie">
+            <div class="head-img">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            </div>
+            <div class="message-tip">
+              <span class="time">2.20 13:10</span>
+              <div class="message-detail">
+                  cross the stars and the moon to meet
+                  yourself better
+              </div>
+            </div>
+          </div>
+          <div class="message-item-send">
+            <div class="head-img">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            </div>
+            <div class="message-tip">
+              <span class="time">2.20 13:10</span>
+              <div class="message-detail">
+                Chat virtual copywriting...
+              </div>
+            </div>
+          </div>
+          <div class="message-item-send">
+            <div class="head-img">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+            </div>
+            <div class="message-tip">
+              <span class="time">2.20 13:10</span>
+              <div class="message-detail">
+                Chat virtual copywriting...
+              </div>
+            </div>
+          </div>
+
+      </div> -->
+      <div class="chat-interface">
+      </div>
+
+      <!-- 输入框 -->
+      <div class="footer-edit">
+        <input class="edit-message" type="text" name="send_message" value="" placeholder="Enter your message...">
+        <button class="send" type="button" name="button">
+          send
+        </button>
+      </div>
+    </div>
+    <!-- popup -->
+    <!-- 好友信息 -->
+    <div class="modal-warp hide" id="info-pop">
+      <div class="modal-panel info-panel">
+        <div class="close-modal">
+          <span class="icon close-btn close-btn-m"></span>
+        </div>
+        <div class="sign-panel">
+            <div class="panel-cont">
+              <div class="card-space-ctrl">
+                <div class="card-header">
+                  <div class="head-img">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                  </div>
+                  <span class="pet-name">
+                    RobQtt
+                  </span>
+                </div>
+                <div class="card-body">
+                    <a href="">Platform ID</a>
+                      <dl>
+                        <dt>
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                        </dt>
+                        <dd>mxguy</dd>
+                      </dl>
+                      <dl>
+                        <dt>
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                        </dt>
+                        <dd>coming soon</dd>
+                      </dl>
+                      <dl>
+                        <dt>
+                          <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                        </dt>
+                        <dd>coming soon</dd>
+                      </dl>
+
+                    <a class="operators" href="">Top Operators</a>
+                    <ul class="clearfix">
+                      <li>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </li>
+                      <li>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </li>
+                      <li>
+                        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                      </li>
+                    </ul>
+                </div>
+                <div class="btn-wrap">
+                  <button type="button" class="submitname-btn">
+                    Invite to group
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-warp hide" id="add-pop">
+      <div class="modal-panel">
+        <div class="close-modal">
+          <span class="icon close-btn close-btn-m"></span>
+        </div>
+        <div class="sign-panel">
+            <div class="panel-title clearfix">
+              <div class="fl">
+                SELECT GROUP
+              </div>
+            </div>
+            <div class="panel-cont">
+              <form action="">
+                  <div class="items">
+                    <input id="memberid" type="radio" name="radio" value="" class="hide">
+                      <label for="memberid"></label>  <!-- 隐藏input用label写样式，for必须和input的ID对应 -->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    <span class="nickname">Game House</span>
+                  </div>
+                  <div class="items">
+                    <input id="member_id" type="radio" name="radio" value="" class="hide">
+                      <label for="member_id"></label>  <!-- 隐藏input用label写样式，for必须和input的ID对应 -->
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==">
+                    <span class="nickname">Game House</span>
+                  </div>
+              </form>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="submitname-btn">
+                Submit
+              </button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <script type="text/javascript">
+    $(function(){
+      var data = [{"uid":"1","uname":"RobQtt","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"Chat virtual copywriting...","own":"0"},{"uid":"1","uname":"RobQtt","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"Chat virtual copywriting...","own":"0"},{"uid":"1","uname":"RobQtt","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"Chat virtual copywriting...","own":"0"},{"uid":"1","uname":"Alen","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"cross the stars and the moon to meet yourself better","own":"1"},{"uid":"1","uname":"Alen","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"Chat virtual copywriting The world is suidernly late the mountains rivers sre slready autum...","own":"1"},{"uid":"1","uname":"RobQtt","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"Chat virtual copywriting...","own":"0"},{"uid":"1","uname":"RobQtt","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":"Chat virtual copywriting...","own":"0"}];
+      //聊天内容数据渲染
+      var message_load = function(data){
+           var htm = data.own=='1' ? '<div class="message-item-send"><div class="head-img"><img src="'+data.avatar+'"></div><div class="message-tip"><div class="friend-name"><span class="time">'+data.time+'</span></div><div class="message-detail">'+data.content+'</div></div></div>' : '<div class="message-item-recevie"><div class="head-img show-modal" data-modal="#info-pop"><img src="'+data.avatar+'"></div><div class="message-tip"><div class="friend-name"><span class="time">'+data.time+'</span></div><div class="message-detail">'+data.content+'</div></div></div>';
+            $('.chat-interface').append(htm);
+            $('.chat-container .chat-interface').scrollTop($('.chat-container .chat-interface')[0].scrollHeight);
+      }
+      window.onload = function(){
+        $.each(data,function(k,v){
+            message_load(v);
+        });
+      }
+
+      $('.send').on('click',function(){
+        if($('input[name=send_message]').val().trim()!=''){
+            message_load({"uid":"1","uname":"Alen","avatar":"data:image/gif;base64,R0lGODlhAQABAIAAAO/v7////yH5BAAHAP8ALAAAAAABAAEAAAICRAEAOw==","time":"2.20 13:10","content":$('input[name=send_message]').val(),"own":"1"});
+        }
+        $('input[name=send_message]').val('');
+      });
+      $('input[name=send_message]').focus(function(){
+        $("body").keydown(function() {
+             if (event.keyCode == "13") {
+                 $('.send').click();
+             }
+         });
+      });
+      //返回上一页
+      $(".return_icon").click(function(){
+        history.go(-1)
+        })
+        //弹出模态框
+        $(".chat-interface").on('click','.show-modal',function(){
+          $($(this).data('modal')).show();
+
+        })
+        //关闭pop
+        $(".close-btn").on('click',function(){
+          $(this).closest('.modal-warp').hide();
+        })
+        $(".submitname-btn").on('click',function(){
+          $(this).closest('.modal-warp').hide();
+          $("#add-pop").show();
+        })
+    })
+  </script>
+  </body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>Q&A</title>
+    <link rel="stylesheet" href="./statics/main.css">
+    <link rel="stylesheet" href="./statics/profile.css">
+    <script src="../public/js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <div class="header">
+    <i class="icon return_icon"></i>
+    <span>EDIT PROFILE</span>
+    <i class="icon add-friends"></i>
+  </div>
+  <div class="profile-container">
+
+  <div class="right-panel">
+    <div id="profile" class="profile-wrap hide">
+      <div class="userhead-thumb">
+        <img src="./statics/icon/myhead.png">
+      </div>
+      <div class="name">
+        Mr Ashen one
+      </div>
+      <div class="steam-id">
+        mxguy
+      </div>
+      <div class="form-wrap">
+        <div class="edit-form">
+          <label class="nickname">Name</label>
+          <input type="text" name="nickname" value="Mr Ashen one" placeholder="">
+        </div>
+        <div class="edit-form">
+          <label class="nickname">User Name</label>
+          <input type="text" name="nickname" value="" placeholder="Mr Ashen one">
+        </div>
+        <div class="edit-form">
+          <label class="nickname">Email</label>
+          <input type="text" name="nickname" placeholder="Jiejng@qq.cn">
+        </div>
+        <div class="edit-form">
+          <label class="nickname bio-label">Bio</label>
+          <textarea class="bio-text" type="text" name="nickname" placeholder="Passionate about R6. Diamond player.Looking for serious, communicative teamplayer to rank up together."></textarea>
+        </div>
+        <div class="submit-wrap">
+          <button class="submit-edit" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="pswd" class="profile-wrap hide">
+    <div class="m_logo">
+      <img src="./statics/icon/logo_black.png">
+    </div>
+      <div class="form-wrap password-cont">
+        <div class="edit-form">
+          <label class="nickname">Old Password</label>
+          <input class="pswd" type="password" name="nickname" value="Mr Ashen one" placeholder="">
+          <span class="visible icon visible-ctrl hide" data-see="password"></span>
+          <span class="invisible icon visible-ctrl" data-see="text"></span>
+        </div>
+        <div class="edit-form">
+          <label class="nickname">New Password</label>
+          <input class="pswd" type="text" name="nickname" value="123" placeholder="">
+          <span class="visible icon visible-ctrl" data-see="password"></span>
+          <span class="invisible icon visible-ctrl hide" data-see="text"></span>
+        </div>
+        <div class="edit-form">
+          <label class="nickname">Confirm NewPassword</label>
+          <input class="pswd" type="password" name="nickname" value="" placeholder="">
+        </div>
+        <div class="submit-wrap">
+          <a href="">Forgot Password?</a>
+        </div>
+        <div class="submit-wrap">
+          <button class="submit-edit" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+    <div id="plat" class="profile-wrap hide">
+      <div class="logo">
+      logo
+      </div>
+      <div class="form-wrap password-cont">
+        <div class="edit-form">
+          <label class="nickname">Current Steam ID</label>
+          <input type="password" name="nickname" value="" placeholder="mxguy">
+        </div>
+        <div class="edit-form">
+          <label class="nickname">Change ID</label>
+          <input class="chang-id" type="password" name="nickname" value="" placeholder="">
+          <button class="verify" type="button" name="button">Verify</button>
+        </div>
+        <div class="submit-wrap">
+          <button class="submit-edit" type="button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+<script type="text/javascript">
+  $(function(){
+    //返回上一页
+    $(".return_icon").click(function(){
+      history.go(-1)
+    })
+    //哪来的
+    var show = window.location.href.split("?")[1];
+    $('#'+show).show();
+    //console.log(window.location.href.split("?")[1]);
+  })
+</script>
+</html>
